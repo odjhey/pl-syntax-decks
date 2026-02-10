@@ -1,0 +1,171 @@
+# WARNING! AI Generated content.
+version: 0
+cards:
+  - id: core_001
+    title: "Counter: top-k frequencies"
+    tags: [core, dict, collections]
+    prompt: >
+      Given a list of strings, compute frequency counts and print the top 10.
+      Then print the number of unique items.
+    hints: > # we could rename this probable, like we could
+      You may find jsonl datasets here <link here>
+    constraints:
+      - Use collections.Counter
+      - No manual dict counting loop
+    done_when:
+      - Prints top 10 items with counts
+      - Prints unique item count
+    stretch_goals:
+      - Also print the most common item per first-letter bucket (A, B, C...)
+  
+  - id: core_002
+    title: "List comprehension: filter and transform"
+    tags: [core, list, comprehension]
+    prompt: >
+      Given a list of numbers, filter to even numbers, square them, and return as new list.
+    hints: >
+      Start with the filter condition, then the transform expression.
+    constraints:
+      - Must use list comprehension
+      - No for loops
+    done_when:
+      - Returns list of squared even numbers
+    stretch_goals:
+      - Do the same with a generator expression
+  
+  - id: core_003
+    title: "Set operations: intersection and difference"
+    tags: [core, set, operations]
+    prompt: >
+      Given two lists of IDs, find common elements (intersection) and unique elements in first list (difference).
+    hints: >
+      Convert to sets first for O(1) lookups.
+    constraints:
+      - Use set operations (&, - or methods)
+      - No manual iteration
+    done_when:
+      - Prints intersection and difference results
+    stretch_goals:
+      - Also compute symmetric difference
+  
+  - id: core_004
+    title: "String manipulation: split, strip, join"
+    tags: [core, string, methods]
+    prompt: >
+      Given a multiline string with extra whitespace, split into lines, strip each line, and filter empty lines.
+    hints: >
+      Use str.splitlines() or split('\n'), then list comprehension with str.strip().
+    constraints:
+      - Use string methods, not regex
+      - Single line of code if possible
+    done_when:
+      - Returns clean list of non-empty lines
+    stretch_goals:
+      - Join result back into clean string with newlines
+  
+  - id: core_005
+    title: "Dict comprehension: invert mapping"
+    tags: [core, dict, comprehension]
+    prompt: >
+      Given a dict with unique values, create a new dict where keys become values and values become keys.
+    hints: >
+      Dict comprehension syntax: {new_key: new_value for key, value in original.items()}
+    constraints:
+      - Must use dict comprehension
+    done_when:
+      - Returns inverted dict
+    stretch_goals:
+      - Handle non-unique values by grouping keys in list
+  
+  - id: core_006
+    title: "Lambda with sort: custom key function"
+    tags: [core, lambda, sort]
+    prompt: >
+      Sort a list of dictionaries by a specific key (e.g., 'name' or 'date') in descending order.
+    hints: >
+      Use sorted() with key parameter and lambda.
+    constraints:
+      - Must use lambda for key function
+    done_when:
+      - Returns sorted list
+    stretch_goals:
+      - Sort by multiple keys (primary, secondary)
+  
+  - id: core_007
+    title: "File I/O: read and process lines"
+    tags: [core, file, io]
+    prompt: >
+      Read a text file line by line, count lines containing a specific substring.
+    hints: >
+      Use with open() context manager and str in str check.
+    constraints:
+      - Use context manager (with statement)
+    done_when:
+      - Prints count of matching lines
+    stretch_goals:
+      - Also collect and print matching lines
+  
+  - id: core_008
+    title: "Try-except: handle specific exceptions"
+    tags: [core, exception, error-handling]
+    prompt: >
+      Convert a list of strings to integers, skipping invalid entries. Return valid ints.
+    hints: >
+      Catch ValueError specifically, not bare except.
+    constraints:
+      - Must use try-except block
+      - No type checking beforehand
+    done_when:
+      - Returns list of valid integers
+    stretch_goals:
+      - Also count and return invalid entries
+  
+  - id: core_009
+    title: "Generator: yield streaming results"
+    tags: [core, generator, yield]
+    prompt: >
+      Create a generator that yields Fibonacci numbers up to a limit.
+    hints: >
+      Use yield instead of returning a list.
+    constraints:
+      - Must use yield keyword
+      - Must be lazy (no pre-computation)
+    done_when:
+      - Generator yields Fibonacci sequence
+    stretch_goals:
+      - Also yield index alongside value
+  
+  - id: core_010
+    title: "Defaultdict: handle missing keys"
+    tags: [core, dict, collections]
+    prompt: >
+      Given a list of (key, value) pairs, group values by key without checking if key exists.
+    hints: >
+      Use collections.defaultdict with list factory.
+    constraints:
+      - Must use defaultdict
+      - No if key in dict checks
+    done_when:
+      - Returns dict with grouped values
+    stretch_goals:
+      - Use setdefault as alternative
+
+decks:
+  - id: py_core_fluency
+    name: Python Core Fluency
+    description: Core syntax reps until it feels like breathing.
+    draw_strategy: random
+    tags_any: []          # optional filter defaults
+    tags_all: []
+    cards:
+      - id: core_001
+      - id: core_002
+      - id: core_003
+      - id: core_004
+      - id: core_005
+      - id: core_006
+      - id: core_007
+      - id: core_008
+      - id: core_009
+      - id: core_010
+ 
