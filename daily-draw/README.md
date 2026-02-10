@@ -3,3 +3,7 @@
 
 ## TODO
 - [ ] work on the cards, its AI generated for now
+
+## RUN
+`python -m src.main`
+
