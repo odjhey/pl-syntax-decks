@@ -1,5 +1,7 @@
-from .decks import load
 import numpy as np
+
+from .decks import load
+from .mini_srs import draw_rand, load_history
 
 
 def main():
@@ -11,5 +13,12 @@ def main():
     print(cards[np.argmax(oh)])
 
 
+def exec_load_history():
+    print("Loading history...")
+    srs = load_history()
+    draw_rand(srs)
+
+
 if __name__ == "__main__":
-    main()
+    # main()
+    exec_load_history()
